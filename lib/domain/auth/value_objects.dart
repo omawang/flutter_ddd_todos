@@ -24,5 +24,5 @@ class Password extends ValueObject<String> {
     return Password._(validateShortPassword(input));
   }
 
-  Password._(this.value);
+  const Password._(this.value);
 }
