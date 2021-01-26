@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_ddd_todos/domain/auth/auth_failure.dart';
 import 'package:flutter_ddd_todos/domain/auth/i_auth_facade.dart';
 import 'package:flutter_ddd_todos/domain/auth/user.dart';
