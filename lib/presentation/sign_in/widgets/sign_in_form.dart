@@ -12,17 +12,20 @@ class SignInForm extends StatelessWidget {
       listener: (context, state) {
         state.authFailureOrSuccessOption.fold(
           () {},
-          (either) => either.fold((failure) {
-            FlushbarHelper.createError(
-              message: failure.map(
-                canceledByUser: (_) => 'Canceled by user',
-                serverError: (_) => 'Server error',
-                emailAlreadyInUse: (_) => 'Email already in use',
-                invalidEmailAndPasswordCombination: (_) =>
-                    'Invalid email and password combination',
-              ),
-            ).show(context);
-          }, (_) => null),
+          (either) => either.fold(
+            (failure) {
+              FlushbarHelper.createError(
+                message: failure.map(
+                  canceledByUser: (_) => 'Canceled by user',
+                  serverError: (_) => 'Server error',
+                  emailAlreadyInUse: (_) => 'Email already in use',
+                  invalidEmailAndPasswordCombination: (_) =>
+                      'Invalid email and password combination',
+                ),
+              ).show(context);
+            },
+            (_) {},
+          ),
         );
       },
       builder: (context, state) {
@@ -87,8 +90,8 @@ class SignInForm extends StatelessWidget {
                   Expanded(
                     child: FlatButton(
                       onPressed: () {
-                        context.read<SignInFormBloc>().add(
-                            const SignInFormEvent.signInWithEmailAndPassword());
+                        context.read<SignInFormBloc>().add(const SignInFormEvent
+                            .signInWithEmailAndPasswordPressed());
                       },
                       child: const Text('Sign In'),
                     ),
@@ -97,7 +100,7 @@ class SignInForm extends StatelessWidget {
                     child: FlatButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(const SignInFormEvent
-                            .registerWithEmailAndPassword());
+                            .registerWithEmailAndPasswordPressed());
                       },
                       child: const Text('Register'),
                     ),
@@ -109,7 +112,7 @@ class SignInForm extends StatelessWidget {
                 onPressed: () {
                   context
                       .read<SignInFormBloc>()
-                      .add(const SignInFormEvent.signInWithGoogle());
+                      .add(const SignInFormEvent.signInWithGooglePressed());
                 },
                 color: Colors.lightBlue,
                 child: const Text(
