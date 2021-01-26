@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376212078758",
+    "project_id": "ddd-todos",
+    "storage_bucket": "ddd-todos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376212078758:android:3a8f8a54ffa5be141ff467",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ddd_todos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376212078758-6folhhlptsnqaevf91i3t6huss4m2sta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtJvyZJXsY3GZAwV4_5hSQMjaeUmo2e-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376212078758-6folhhlptsnqaevf91i3t6huss4m2sta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

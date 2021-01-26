@@ -5,6 +5,7 @@ import 'package:injectable/injectable.dart';
 
 import 'injections.dart';
 
+// ignore: avoid_void_async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
