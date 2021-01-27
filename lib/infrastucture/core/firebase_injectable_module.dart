@@ -9,4 +9,7 @@ abstract class FirebaseInjectableModule {
 
   @lazySingleton
   GoogleSignIn get googleSignIn => GoogleSignIn();
+
+  // @lazySingleton
+  // GoogleSignIn get googleSignIn => GoogleSignIn();
 }
