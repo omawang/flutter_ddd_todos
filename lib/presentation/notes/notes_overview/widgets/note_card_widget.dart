@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ddd_todos/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:flutter_ddd_todos/domain/notes/note.dart';
 import 'package:flutter_ddd_todos/domain/notes/todo_item.dart';
+import 'package:flutter_ddd_todos/presentation/routes/router.gr.dart';
 import 'package:kt_dart/kt.dart';
 
 class NoteCard extends StatelessWidget {
@@ -24,30 +26,35 @@ class NoteCard extends StatelessWidget {
       },
       child: Card(
         color: note.color.getOrCrash(),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                note.body.getOrCrash(),
-                style: const TextStyle(fontSize: 18),
-              ),
-              if (note.todos.length > 0) ...[
-                const SizedBox(height: 4),
-                Wrap(
-                  spacing: 8,
-                  children: [
-                    ...note.todos
-                        .getOrCrash()
-                        .map(
-                          (todo) => TodoDisplay(todo: todo),
-                        )
-                        .iter,
-                  ],
+        child: InkWell(
+          onTap: () {
+            ExtendedNavigator.of(context).pushNoteFormPage(editedNote: note);
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  note.body.getOrCrash(),
+                  style: const TextStyle(fontSize: 18),
                 ),
+                if (note.todos.length > 0) ...[
+                  const SizedBox(height: 4),
+                  Wrap(
+                    spacing: 8,
+                    children: [
+                      ...note.todos
+                          .getOrCrash()
+                          .map(
+                            (todo) => TodoDisplay(todo: todo),
+                          )
+                          .iter,
+                    ],
+                  ),
+                ],
               ],
-            ],
+            ),
           ),
         ),
       ),

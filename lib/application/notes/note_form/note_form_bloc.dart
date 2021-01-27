@@ -7,14 +7,16 @@ import 'package:flutter_ddd_todos/domain/notes/i_note_repository.dart';
 import 'package:flutter_ddd_todos/domain/notes/note.dart';
 import 'package:flutter_ddd_todos/domain/notes/note_failure.dart';
 import 'package:flutter_ddd_todos/domain/notes/value_objects.dart';
-import 'package:flutter_ddd_todos/presentation/notes/note_form/todo_item_presentation_classes.dart';
+import 'package:flutter_ddd_todos/presentation/notes/note_form/misc/todo_item_presentation_classes.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
 
 part 'note_form_event.dart';
 part 'note_form_state.dart';
 part 'note_form_bloc.freezed.dart';
 
+@injectable
 class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
   final INoteRepository _noteRepository;
 
