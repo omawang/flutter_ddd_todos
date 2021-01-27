@@ -9,6 +9,8 @@ import 'package:flutter_ddd_todos/injections.dart';
 import 'package:flutter_ddd_todos/presentation/notes/notes_overview/widgets/notes_overview_body_widget.dart';
 import 'package:flutter_ddd_todos/presentation/routes/router.gr.dart';
 
+import 'widgets/uncompleted_switch_widget.dart';
+
 class NotesOverviewPage extends StatelessWidget {
   const NotesOverviewPage({Key key}) : super(key: key);
 
@@ -60,11 +62,8 @@ class NotesOverviewPage extends StatelessWidget {
                 context.read<AuthBloc>().add(const AuthEvent.signedOut());
               },
             ),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.indeterminate_check_box),
-                onPressed: () {},
-              ),
+            actions: [
+              const UncompletedSwitch(),
             ],
           ),
           floatingActionButton: FloatingActionButton(
