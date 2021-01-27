@@ -7,6 +7,7 @@ import 'package:flutter_ddd_todos/application/notes/note_form/note_form_bloc.dar
 import 'package:flutter_ddd_todos/domain/notes/note.dart';
 import 'package:flutter_ddd_todos/injections.dart';
 import 'package:flutter_ddd_todos/presentation/notes/note_form/widgets/add_todo_tile_widget.dart';
+import 'package:flutter_ddd_todos/presentation/notes/note_form/widgets/todo_list_widget.dart';
 import 'package:flutter_ddd_todos/presentation/routes/router.gr.dart';
 import 'package:provider/provider.dart';
 
@@ -60,7 +61,6 @@ class NoteFormPage extends StatelessWidget {
         },
         buildWhen: (p, c) => p.isSaving != c.isSaving,
         builder: (context, state) {
-          print(context.read<NoteFormBloc>().state.isSaving);
           return Stack(
             children: [
               const NoteFormPageScaffold(),
@@ -148,6 +148,7 @@ class NoteFormPageScaffold extends StatelessWidget {
                   children: [
                     const BodyField(),
                     const ColorField(),
+                    const TodoList(),
                     const AddTodoTile(),
                   ],
                 ),
