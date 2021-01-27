@@ -20,7 +20,7 @@ abstract class NoteDto implements _$NoteDto {
     @required String body,
     @required int color,
     @required List<TodoItemDto> todos,
-    @required @ServerTimestampConverter() FieldValue serverTimeStamp,
+    @required @ServerTimestampConverter() FieldValue serverTimestamp,
   }) = _NoteDto;
 
   factory NoteDto.fromDomain(Note note) {
@@ -32,7 +32,7 @@ abstract class NoteDto implements _$NoteDto {
           .getOrCrash()
           .map((todoItem) => TodoItemDto.fromDomain(todoItem))
           .asList(),
-      serverTimeStamp: FieldValue.serverTimestamp(),
+      serverTimestamp: FieldValue.serverTimestamp(),
     );
   }
 

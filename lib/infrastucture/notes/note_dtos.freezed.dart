@@ -22,13 +22,13 @@ class _$NoteDtoTearOff {
       @required String body,
       @required int color,
       @required List<TodoItemDto> todos,
-      @required @ServerTimestampConverter() FieldValue serverTimeStamp}) {
+      @required @ServerTimestampConverter() FieldValue serverTimestamp}) {
     return _NoteDto(
       id: id,
       body: body,
       color: color,
       todos: todos,
-      serverTimeStamp: serverTimeStamp,
+      serverTimestamp: serverTimestamp,
     );
   }
 
@@ -50,7 +50,7 @@ mixin _$NoteDto {
   int get color;
   List<TodoItemDto> get todos;
   @ServerTimestampConverter()
-  FieldValue get serverTimeStamp;
+  FieldValue get serverTimestamp;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -66,7 +66,7 @@ abstract class $NoteDtoCopyWith<$Res> {
       String body,
       int color,
       List<TodoItemDto> todos,
-      @ServerTimestampConverter() FieldValue serverTimeStamp});
+      @ServerTimestampConverter() FieldValue serverTimestamp});
 }
 
 /// @nodoc
@@ -83,16 +83,16 @@ class _$NoteDtoCopyWithImpl<$Res> implements $NoteDtoCopyWith<$Res> {
     Object body = freezed,
     Object color = freezed,
     Object todos = freezed,
-    Object serverTimeStamp = freezed,
+    Object serverTimestamp = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
       body: body == freezed ? _value.body : body as String,
       color: color == freezed ? _value.color : color as int,
       todos: todos == freezed ? _value.todos : todos as List<TodoItemDto>,
-      serverTimeStamp: serverTimeStamp == freezed
-          ? _value.serverTimeStamp
-          : serverTimeStamp as FieldValue,
+      serverTimestamp: serverTimestamp == freezed
+          ? _value.serverTimestamp
+          : serverTimestamp as FieldValue,
     ));
   }
 }
@@ -107,7 +107,7 @@ abstract class _$NoteDtoCopyWith<$Res> implements $NoteDtoCopyWith<$Res> {
       String body,
       int color,
       List<TodoItemDto> todos,
-      @ServerTimestampConverter() FieldValue serverTimeStamp});
+      @ServerTimestampConverter() FieldValue serverTimestamp});
 }
 
 /// @nodoc
@@ -125,16 +125,16 @@ class __$NoteDtoCopyWithImpl<$Res> extends _$NoteDtoCopyWithImpl<$Res>
     Object body = freezed,
     Object color = freezed,
     Object todos = freezed,
-    Object serverTimeStamp = freezed,
+    Object serverTimestamp = freezed,
   }) {
     return _then(_NoteDto(
       id: id == freezed ? _value.id : id as String,
       body: body == freezed ? _value.body : body as String,
       color: color == freezed ? _value.color : color as int,
       todos: todos == freezed ? _value.todos : todos as List<TodoItemDto>,
-      serverTimeStamp: serverTimeStamp == freezed
-          ? _value.serverTimeStamp
-          : serverTimeStamp as FieldValue,
+      serverTimestamp: serverTimestamp == freezed
+          ? _value.serverTimestamp
+          : serverTimestamp as FieldValue,
     ));
   }
 }
@@ -148,11 +148,11 @@ class _$_NoteDto extends _NoteDto {
       @required this.body,
       @required this.color,
       @required this.todos,
-      @required @ServerTimestampConverter() this.serverTimeStamp})
+      @required @ServerTimestampConverter() this.serverTimestamp})
       : assert(body != null),
         assert(color != null),
         assert(todos != null),
-        assert(serverTimeStamp != null),
+        assert(serverTimestamp != null),
         super._();
 
   factory _$_NoteDto.fromJson(Map<String, dynamic> json) =>
@@ -169,11 +169,11 @@ class _$_NoteDto extends _NoteDto {
   final List<TodoItemDto> todos;
   @override
   @ServerTimestampConverter()
-  final FieldValue serverTimeStamp;
+  final FieldValue serverTimestamp;
 
   @override
   String toString() {
-    return 'NoteDto(id: $id, body: $body, color: $color, todos: $todos, serverTimeStamp: $serverTimeStamp)';
+    return 'NoteDto(id: $id, body: $body, color: $color, todos: $todos, serverTimestamp: $serverTimestamp)';
   }
 
   @override
@@ -188,9 +188,9 @@ class _$_NoteDto extends _NoteDto {
                 const DeepCollectionEquality().equals(other.color, color)) &&
             (identical(other.todos, todos) ||
                 const DeepCollectionEquality().equals(other.todos, todos)) &&
-            (identical(other.serverTimeStamp, serverTimeStamp) ||
+            (identical(other.serverTimestamp, serverTimestamp) ||
                 const DeepCollectionEquality()
-                    .equals(other.serverTimeStamp, serverTimeStamp)));
+                    .equals(other.serverTimestamp, serverTimestamp)));
   }
 
   @override
@@ -200,7 +200,7 @@ class _$_NoteDto extends _NoteDto {
       const DeepCollectionEquality().hash(body) ^
       const DeepCollectionEquality().hash(color) ^
       const DeepCollectionEquality().hash(todos) ^
-      const DeepCollectionEquality().hash(serverTimeStamp);
+      const DeepCollectionEquality().hash(serverTimestamp);
 
   @JsonKey(ignore: true)
   @override
@@ -220,7 +220,7 @@ abstract class _NoteDto extends NoteDto {
           @required String body,
           @required int color,
           @required List<TodoItemDto> todos,
-          @required @ServerTimestampConverter() FieldValue serverTimeStamp}) =
+          @required @ServerTimestampConverter() FieldValue serverTimestamp}) =
       _$_NoteDto;
 
   factory _NoteDto.fromJson(Map<String, dynamic> json) = _$_NoteDto.fromJson;
@@ -236,7 +236,7 @@ abstract class _NoteDto extends NoteDto {
   List<TodoItemDto> get todos;
   @override
   @ServerTimestampConverter()
-  FieldValue get serverTimeStamp;
+  FieldValue get serverTimestamp;
   @override
   @JsonKey(ignore: true)
   _$NoteDtoCopyWith<_NoteDto> get copyWith;

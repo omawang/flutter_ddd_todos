@@ -14,8 +14,8 @@ _$_NoteDto _$_$_NoteDtoFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : TodoItemDto.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    serverTimeStamp:
-        const ServerTimestampConverter().fromJson(json['serverTimeStamp']),
+    serverTimestamp:
+        const ServerTimestampConverter().fromJson(json['serverTimestamp']),
   );
 }
 
@@ -24,8 +24,8 @@ Map<String, dynamic> _$_$_NoteDtoToJson(_$_NoteDto instance) =>
       'body': instance.body,
       'color': instance.color,
       'todos': instance.todos,
-      'serverTimeStamp':
-          const ServerTimestampConverter().toJson(instance.serverTimeStamp),
+      'serverTimestamp':
+          const ServerTimestampConverter().toJson(instance.serverTimestamp),
     };
 
 _$_TodoItemDto _$_$_TodoItemDtoFromJson(Map<String, dynamic> json) {
