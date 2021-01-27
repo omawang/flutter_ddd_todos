@@ -8,6 +8,9 @@ import 'package:flutter_ddd_todos/domain/notes/note.dart';
 import 'package:flutter_ddd_todos/injections.dart';
 import 'package:flutter_ddd_todos/presentation/routes/router.gr.dart';
 
+import 'widgets/body_field_widget.dart';
+import 'widgets/color_field_widget.dart';
+
 class NoteFormPage extends StatelessWidget {
   final Note editedNote;
 
@@ -54,10 +57,12 @@ class NoteFormPage extends StatelessWidget {
         },
         buildWhen: (p, c) => p.isSaving != c.isSaving,
         builder: (context, state) {
+          print(context.read<NoteFormBloc>().state.isSaving);
           return Stack(
             children: [
               const NoteFormPageScaffold(),
-              SavingInProgressOverlay(isSaving: state.isSaving),
+              SavingInProgressOverlay(
+                  isSaving: context.read<NoteFormBloc>().state.isSaving),
             ],
           );
         },
@@ -127,6 +132,22 @@ class NoteFormPageScaffold extends StatelessWidget {
             },
           )
         ],
+      ),
+      body: BlocBuilder<NoteFormBloc, NoteFormState>(
+        buildWhen: (p, c) => p.showErrorMessages != c.showErrorMessages,
+        builder: (context, state) {
+          return Form(
+            autovalidate: state.showErrorMessages,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const BodyField(),
+                  const ColorField(),
+                ],
+              ),
+            ),
+          );
+        },
       ),
     );
   }
