@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:kt_dart/kt.dart';
+import 'package:kt_dart/collection.dart';
 
 import 'failures.dart';
 

@@ -5,7 +5,7 @@ import 'package:flutter_ddd_todos/domain/core/failures.dart';
 import 'package:flutter_ddd_todos/domain/core/value_objects.dart';
 import 'package:flutter_ddd_todos/domain/core/value_transformers.dart';
 import 'package:flutter_ddd_todos/domain/core/value_validators.dart';
-import 'package:kt_dart/kt.dart';
+import 'package:kt_dart/collection.dart';
 
 class NoteBody extends ValueObject<String> {
   @override

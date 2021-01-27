@@ -1,12 +1,12 @@
 import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:kt_dart/kt.dart';
 import 'package:flutter_ddd_todos/domain/core/value_objects.dart';
 import 'package:flutter_ddd_todos/domain/notes/note.dart';
 import 'package:flutter_ddd_todos/domain/notes/todo_item.dart';
 import 'package:flutter_ddd_todos/domain/notes/value_objects.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:kt_dart/collection.dart';
 
 part 'note_dtos.freezed.dart';
 part 'note_dtos.g.dart';

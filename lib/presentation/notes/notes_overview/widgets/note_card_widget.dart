@@ -5,7 +5,7 @@ import 'package:flutter_ddd_todos/application/notes/note_actor/note_actor_bloc.d
 import 'package:flutter_ddd_todos/domain/notes/note.dart';
 import 'package:flutter_ddd_todos/domain/notes/todo_item.dart';
 import 'package:flutter_ddd_todos/presentation/routes/router.gr.dart';
-import 'package:kt_dart/kt.dart';
+import 'package:kt_dart/collection.dart';
 
 class NoteCard extends StatelessWidget {
   final Note note;
