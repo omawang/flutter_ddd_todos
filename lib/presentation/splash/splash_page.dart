@@ -14,7 +14,7 @@ class SplashPage extends StatelessWidget {
         state.map(
           initial: (_) {},
           authenticated: (_) {
-            //
+            ExtendedNavigator.of(context).replace(Routes.notesOverviewPage);
           },
           unauthenticated: (_) {
             ExtendedNavigator.of(context).replace(Routes.signInPage);

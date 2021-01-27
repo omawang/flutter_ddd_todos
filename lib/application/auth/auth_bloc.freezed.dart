@@ -19,7 +19,7 @@ class _$AuthEventTearOff {
   }
 
 // ignore: unused_element
-  SignOut signOut() {
+  SignOut signedOut() {
     return const SignOut();
   }
 }
@@ -33,23 +33,23 @@ mixin _$AuthEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult authCheckRequest(),
-    @required TResult signOut(),
+    @required TResult signedOut(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult authCheckRequest(),
-    TResult signOut(),
+    TResult signedOut(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult authCheckRequest(AuthCheckRequest value),
-    @required TResult signOut(SignOut value),
+    @required TResult signedOut(SignOut value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult authCheckRequest(AuthCheckRequest value),
-    TResult signOut(SignOut value),
+    TResult signedOut(SignOut value),
     @required TResult orElse(),
   });
 }
@@ -108,10 +108,10 @@ class _$AuthCheckRequest implements AuthCheckRequest {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult authCheckRequest(),
-    @required TResult signOut(),
+    @required TResult signedOut(),
   }) {
     assert(authCheckRequest != null);
-    assert(signOut != null);
+    assert(signedOut != null);
     return authCheckRequest();
   }
 
@@ -119,7 +119,7 @@ class _$AuthCheckRequest implements AuthCheckRequest {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult authCheckRequest(),
-    TResult signOut(),
+    TResult signedOut(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -133,10 +133,10 @@ class _$AuthCheckRequest implements AuthCheckRequest {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult authCheckRequest(AuthCheckRequest value),
-    @required TResult signOut(SignOut value),
+    @required TResult signedOut(SignOut value),
   }) {
     assert(authCheckRequest != null);
-    assert(signOut != null);
+    assert(signedOut != null);
     return authCheckRequest(this);
   }
 
@@ -144,7 +144,7 @@ class _$AuthCheckRequest implements AuthCheckRequest {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult authCheckRequest(AuthCheckRequest value),
-    TResult signOut(SignOut value),
+    TResult signedOut(SignOut value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -181,7 +181,7 @@ class _$SignOut implements SignOut {
 
   @override
   String toString() {
-    return 'AuthEvent.signOut()';
+    return 'AuthEvent.signedOut()';
   }
 
   @override
@@ -196,23 +196,23 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult authCheckRequest(),
-    @required TResult signOut(),
+    @required TResult signedOut(),
   }) {
     assert(authCheckRequest != null);
-    assert(signOut != null);
-    return signOut();
+    assert(signedOut != null);
+    return signedOut();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult authCheckRequest(),
-    TResult signOut(),
+    TResult signedOut(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (signOut != null) {
-      return signOut();
+    if (signedOut != null) {
+      return signedOut();
     }
     return orElse();
   }
@@ -221,23 +221,23 @@ class _$SignOut implements SignOut {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult authCheckRequest(AuthCheckRequest value),
-    @required TResult signOut(SignOut value),
+    @required TResult signedOut(SignOut value),
   }) {
     assert(authCheckRequest != null);
-    assert(signOut != null);
-    return signOut(this);
+    assert(signedOut != null);
+    return signedOut(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult authCheckRequest(AuthCheckRequest value),
-    TResult signOut(SignOut value),
+    TResult signedOut(SignOut value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (signOut != null) {
-      return signOut(this);
+    if (signedOut != null) {
+      return signedOut(this);
     }
     return orElse();
   }
