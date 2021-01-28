@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_ddd_todos/domain/auth/i_auth_facade.dart';
-import 'package:flutter_ddd_todos/domain/core/errors.dart';
+import 'package:flutter_ddd_todos/domain/auth/repositories/i_auth_facade.dart';
+import 'package:flutter_ddd_todos/domain/core/misc/errors.dart';
 import 'package:flutter_ddd_todos/injections.dart';
 
 extension FirestoreX on FirebaseFirestore {

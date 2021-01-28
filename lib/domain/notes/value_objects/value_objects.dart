@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ddd_todos/domain/core/failures.dart';
-import 'package:flutter_ddd_todos/domain/core/value_objects.dart';
-import 'package:flutter_ddd_todos/domain/core/value_transformers.dart';
-import 'package:flutter_ddd_todos/domain/core/value_validators.dart';
+import 'package:flutter_ddd_todos/domain/core/value_objects/failures.dart';
+import 'package:flutter_ddd_todos/domain/core/value_objects/value_objects.dart';
+import 'package:flutter_ddd_todos/domain/core/misc/value_transformers.dart';
+import 'package:flutter_ddd_todos/domain/core/misc/value_validators.dart';
 import 'package:kt_dart/collection.dart';
 
 class NoteBody extends ValueObject<String> {

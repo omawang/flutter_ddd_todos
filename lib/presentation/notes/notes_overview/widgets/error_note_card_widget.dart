@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ddd_todos/domain/notes/note.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/note.dart';
 
 class ErrorNoteCard extends StatelessWidget {
   final Note note;

@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ddd_todos/domain/core/failures.dart';
-import 'package:flutter_ddd_todos/domain/core/value_objects.dart';
+import 'package:flutter_ddd_todos/domain/core/value_objects/failures.dart';
+import 'package:flutter_ddd_todos/domain/core/value_objects/value_objects.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'value_objects.dart';
+import '../value_objects/value_objects.dart';
 
 part 'todo_item.freezed.dart';
 

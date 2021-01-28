@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ddd_todos/application/notes/note_actor/note_actor_bloc.dart';
-import 'package:flutter_ddd_todos/domain/notes/note.dart';
-import 'package:flutter_ddd_todos/domain/notes/todo_item.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/note.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/todo_item.dart';
 import 'package:flutter_ddd_todos/presentation/routes/router.gr.dart';
 import 'package:kt_dart/collection.dart';
 

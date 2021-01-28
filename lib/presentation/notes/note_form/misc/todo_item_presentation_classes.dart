@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_ddd_todos/domain/core/value_objects.dart';
-import 'package:flutter_ddd_todos/domain/notes/todo_item.dart';
-import 'package:flutter_ddd_todos/domain/notes/value_objects.dart';
+import 'package:flutter_ddd_todos/domain/core/value_objects/value_objects.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/todo_item.dart';
+import 'package:flutter_ddd_todos/domain/notes/value_objects/value_objects.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kt_dart/collection.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ddd_todos/domain/notes/note_failure.dart';
+import 'package:flutter_ddd_todos/domain/notes/value_objects/note_failure.dart';
 
 class CriticalFailureDisplay extends StatelessWidget {
   final NoteFailure failure;

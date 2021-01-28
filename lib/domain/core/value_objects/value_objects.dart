@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ddd_todos/domain/core/errors.dart';
-import 'package:flutter_ddd_todos/domain/core/failures.dart';
+import 'package:flutter_ddd_todos/domain/core/misc/errors.dart';
+import 'package:flutter_ddd_todos/domain/core/value_objects/failures.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uuid/uuid.dart';
 

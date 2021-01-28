@@ -3,10 +3,10 @@ import 'dart:ui';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ddd_todos/domain/notes/i_note_repository.dart';
-import 'package:flutter_ddd_todos/domain/notes/note.dart';
-import 'package:flutter_ddd_todos/domain/notes/note_failure.dart';
-import 'package:flutter_ddd_todos/domain/notes/value_objects.dart';
+import 'package:flutter_ddd_todos/domain/notes/repositories/i_note_repository.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/note.dart';
+import 'package:flutter_ddd_todos/domain/notes/value_objects/note_failure.dart';
+import 'package:flutter_ddd_todos/domain/notes/value_objects/value_objects.dart';
 import 'package:flutter_ddd_todos/presentation/notes/note_form/misc/todo_item_presentation_classes.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';

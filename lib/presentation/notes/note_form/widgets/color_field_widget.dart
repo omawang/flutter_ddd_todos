@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ddd_todos/application/notes/note_form/note_form_bloc.dart';
-import 'package:flutter_ddd_todos/domain/notes/value_objects.dart';
+import 'package:flutter_ddd_todos/domain/notes/value_objects/value_objects.dart';
 
 class ColorField extends StatelessWidget {
   const ColorField({Key key}) : super(key: key);
@@ -11,7 +11,7 @@ class ColorField extends StatelessWidget {
     return BlocBuilder<NoteFormBloc, NoteFormState>(
       buildWhen: (p, c) => p.note.color != c.note.color,
       builder: (context, state) {
-        return Container(
+        return SizedBox(
           height: 80,
           child: ListView.separated(
             padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -36,7 +36,7 @@ class ColorField extends StatelessWidget {
                             ? const BorderSide(width: 1.5)
                             : BorderSide.none),
                   ),
-                  child: Container(
+                  child: const SizedBox(
                     width: 50,
                     height: 50,
                   ),

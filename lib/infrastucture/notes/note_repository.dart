@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_ddd_todos/domain/notes/i_note_repository.dart';
-import 'package:flutter_ddd_todos/domain/notes/note_failure.dart';
-import 'package:flutter_ddd_todos/domain/notes/note.dart';
-import 'package:flutter_ddd_todos/infrastucture/core/firestore_helpers.dart';
-import 'package:flutter_ddd_todos/infrastucture/notes/note_dtos.dart';
+import 'package:flutter_ddd_todos/domain/notes/repositories/i_note_repository.dart';
+import 'package:flutter_ddd_todos/domain/notes/value_objects/note_failure.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/note.dart';
+import 'package:flutter_ddd_todos/infrastucture/core/firestore_x.dart';
+import 'package:flutter_ddd_todos/infrastucture/notes/dtos/note_dtos.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:rxdart/rxdart.dart';

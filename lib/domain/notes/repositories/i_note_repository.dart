@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/collection.dart';
 
-import 'note.dart';
-import 'note_failure.dart';
+import '../entities/note.dart';
+import '../value_objects/note_failure.dart';
 
 abstract class INoteRepository {
   Stream<Either<NoteFailure, KtList<Note>>> watchAll();

@@ -4,7 +4,7 @@ import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ddd_todos/application/notes/note_form/note_form_bloc.dart';
-import 'package:flutter_ddd_todos/domain/notes/note.dart';
+import 'package:flutter_ddd_todos/domain/notes/entities/note.dart';
 import 'package:flutter_ddd_todos/injections.dart';
 import 'package:flutter_ddd_todos/presentation/notes/note_form/widgets/add_todo_tile_widget.dart';
 import 'package:flutter_ddd_todos/presentation/notes/note_form/widgets/todo_list_widget.dart';
